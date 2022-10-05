@@ -1,0 +1,9 @@
+<div class="main-photo">
+  <img src="/assets/img/slider_arrow_left.png" class="prev-btn" (click)="prev()" />
+  <img src="{{photos[selected].photo}}" class="photo" />
+  <img src="/assets/img/slider_arrow_right.png" class="next-btn" (click)="next()" />
+</div>
+<span>*Imagens ilustrativas</span>
+<div class="photo-thumbs">
+  <img src="{{photo.thumb}}" *ngFor="let photo of photos; let i = index" (click)="select(i)" [ngClass]="{'selected': is_photo_selected(i)}" />
+</div>

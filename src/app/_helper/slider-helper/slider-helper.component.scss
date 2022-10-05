@@ -1,0 +1,47 @@
+.main-photo{
+  text-align: center;
+  position: relative;
+
+  .photo{
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .prev-btn{
+    position:absolute;
+    left:0;
+    top: 50%;
+	  transform: translateY(-50%);
+    z-index: 100;
+    cursor: pointer;
+  }
+  .next-btn{
+    position:absolute;
+    right:0;
+    top: 50%;
+	  transform: translateY(-50%);
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.photo-thumbs{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  img{
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  img.selected{
+    border: 1px solid #F97D00;
+  }
+}
+
+span{
+  color: #999999;
+  font-size: 0.7rem;
+}
