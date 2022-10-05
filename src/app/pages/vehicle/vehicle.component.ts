@@ -17,7 +17,7 @@ export class VehicleComponent implements OnInit {
 
   constructor(private vehicle_controller:VehicleController) { }
 
-  vehicle:Vehicle = {id:"1",model:"",photos:[],informations:[],colors:[]};
+  vehicle:Vehicle = {id:"1",model:"",photos:[],informations:[],colors:[],periods:[],franchises:[]};
   is_requesting = false;
   is_found = false;
 

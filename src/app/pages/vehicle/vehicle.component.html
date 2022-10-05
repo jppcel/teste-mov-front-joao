@@ -103,17 +103,31 @@
           <div class="col-md-6">
             <div class="form-group">
               <label>Período do contrato:</label>
-              <select class="form-control">
-                <option value="12">12 meses</option>
-              </select>
+              <div class="select-box">
+                <div class="select">
+                  <select class="form-control">
+                    <option value="{{period.id}}" *ngFor="let period of vehicle.periods">{{period.title}}</option>
+                  </select>
+                </div>
+                <div class="icon">
+                  <fa-icon [icon]="faChevronDown" [classes]="['icon-orange-select']" pull="right"></fa-icon>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label>Franquia KM/mês:</label>
-              <select class="form-control">
-                <option value="1000">1.000 km</option>
-              </select>
+              <div class="select-box">
+                <div class="select">
+                  <select class="form-control">
+                    <option value="{{franchise.id}}" *ngFor="let franchise of vehicle.franchises">{{franchise.value}}</option>
+                  </select>
+                </div>
+                <div class="icon">
+                  <fa-icon [icon]="faChevronDown" [classes]="['icon-orange-select']" pull="right"></fa-icon>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -156,7 +170,7 @@
         </div>
         <div class="row price">
           <div class="col-md-12">
-            <label>Valor Total</label>periodicity
+            <label>Valor Total</label>
             <h4><span class="money">R$</span> 899,00<span class="periodicity">/mês</span><span class="asterisk">*</span></h4>
           </div>
         </div>
