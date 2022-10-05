@@ -20,7 +20,7 @@ COPY ./ /tmp/teste-mov-front-joao
 
 RUN  cd /tmp/teste-mov-front-joao && \
      npm install && \
-     ng build --prod && \
+     ng build --configuration production && \
      cp -R /tmp/teste-mov-front-joao/dist/teste-mov-front-joao/* /usr/local/apache2/htdocs/
 
 WORKDIR /usr/local/apache2/htdocs/
