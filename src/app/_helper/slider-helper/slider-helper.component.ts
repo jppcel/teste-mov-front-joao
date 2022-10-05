@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Photo } from 'src/app/_interfaces/photo';
 
 @Component({
   selector: 'app-slider-helper',
@@ -7,12 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderHelperComponent implements OnInit {
 
-  photos = [
-    {"photo":"https://via.placeholder.com/390x293.png?text=1","thumb":"https://via.placeholder.com/89x61.png?text=1"},
-    {"photo":"https://via.placeholder.com/390x293.png?text=2","thumb":"https://via.placeholder.com/89x61.png?text=2"},
-    {"photo":"https://via.placeholder.com/390x293.png?text=3","thumb":"https://via.placeholder.com/89x61.png?text=3"},
-    {"photo":"https://via.placeholder.com/390x293.png?text=4","thumb":"https://via.placeholder.com/89x61.png?text=4"}
-  ]
+  @Input()
+  photos:Array<Photo> = []
 
   selected = 0;
   constructor() { }

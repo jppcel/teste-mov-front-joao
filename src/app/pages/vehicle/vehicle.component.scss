@@ -1,0 +1,207 @@
+*{
+  color: #58595B;
+}
+
+.breadcumbs{
+  margin-top: 2rem;
+
+  a{
+    color: #F97D00;
+    text-decoration: none;
+  }
+}
+.vehicle-model{
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #000;
+}
+.vehicle-model-detail{
+  font-size: 1.4rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.vehicle-informations{
+  h4{
+    font-size: 1rem;
+    color: #F97D00;
+    padding-bottom: 0.4rem;
+  }
+
+  .info-item, .info-value{
+    font-size: 0.8rem;
+  }
+
+  .info-item{
+    color: #999999;
+  }
+  .info-value{
+    color: #F97D00;
+  }
+}
+
+.seller, .insurance, .additional-services, .accessories{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  h4{
+    color: #58595B;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  p{
+    font-weight: lighter;
+    font-size: 0.9rem;
+  }
+}
+.additional-services, .accessories{
+  border-bottom: 2px solid #F4F4F4;
+}
+
+.insurance-block{
+  background-color: #F4F4F4;
+  padding: 1rem;
+
+  img{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img{
+    text-align: center;
+  }
+
+  .info{
+    p{
+      margin-bottom: 0;
+    }
+    a{
+      color: #F97D00;
+    }
+  }
+}
+
+.contract-header{
+  background-color: #000;
+  padding: 0.5rem;
+  border-radius: 10px 10px 0 0;
+  h3{
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+.contract-body{
+  background-color: #FAFAFA;
+  border: 1px solid #F2F2F2;
+  padding: 1.5rem;
+  .form-group{
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  label{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .end-plates{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .btn-end-plate{
+      width: 55px;
+      height: 55px;
+      line-height: 50px;
+      background-color: white;
+      border: 1px solid #DCDCDC;
+      border-radius: 3px;
+      font-size: 0.8rem;
+
+      padding: 0;
+    }
+    .btn-check:checked + .btn-end-plate{
+      border: 1px solid #F97D00;
+      color: #F97D00;
+    }
+  }
+  .colors{
+    .btn-color{
+      width: 35px;
+      height: 35px;
+      border: 1px solid #DCDCDC;
+      border-radius: 20px;
+      line-height: 32px;
+
+      padding: 0;
+      margin-right: 0.5rem;
+    }
+    .btn-check:checked + .btn-color{
+      border: 1px solid #F97D00;
+      color: #F97D00;
+    }
+    .color-name{
+      display: block;
+      font-weight: lighter;
+      font-size: 0.8rem;
+    }
+  }
+
+  .price{
+    h4{
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: right;
+
+      .money{
+        font-size: 1.2rem;
+      }
+      .periodicity, .asterisk{
+        font-size: 1.2rem;
+        font-weight: normal;
+      }
+      .asterisk{
+        color: #F97D00;
+      }
+    }
+  }
+
+
+
+  .question{
+    display: inline-block;
+    background-color: #F97D00;
+    color: white;
+    border-radius: 16px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+
+    cursor: pointer;
+  }
+
+  .btn-orange{
+    color: white;
+    background-color: #F97D00;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.contract-footer{
+  background-color: #DDDDDD;
+  padding: 1.5rem;
+  p{
+    font-size: 0.9rem;
+    margin: 0;
+    a{
+      color:#F97D00;
+    }
+  }
+}

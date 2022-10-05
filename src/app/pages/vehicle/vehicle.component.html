@@ -1,3 +1,181 @@
-<p>
-  vehicle works!
-</p>
+<div class="container">
+  <div class="breadcumbs">
+    <a href="#">Voltar para a home /</a> Resultado da busca
+  </div>
+
+  <h2 class="vehicle-model">{{vehicle.model}}</h2>
+  <h4 class="vehicle-model-detail">{{vehicle.model_details}}</h4>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-md-8">
+          <app-slider-helper [photos]="vehicle.photos"></app-slider-helper>
+        </div>
+        <div class="col-md-4 vehicle-informations">
+          <h4>Informações</h4>
+          <div class="row" *ngFor="let information of vehicle.informations">
+            <div class="col-md-6 info-item">
+              <img src="{{information.icon}}" *ngIf="information.icon" /> {{information.title}}
+            </div>
+            <div class="col-md-6 info-value">
+              {{information.value}}
+            </div>
+            <div class="col-md-12">
+              <hr/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 info-item">
+              <img src="/assets/img/mais-info-icone.png" /> MAIS INFORMAÇÕES (PDF, URL)
+            </div>
+            <div class="col-md-12">
+              <hr/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row seller">
+        <div class="col-md-6">
+          <h4>Código do Vendedor</h4>
+          <p>Foi auxiliado por um vendedor? Identifique-o aqui:</p>
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Digite aqui o código do vendedor"/>
+        </div>
+      </div>
+
+      <div class="row insurance">
+        <div class="col-md-12">
+          <h4>Proteções</h4>
+          <p>Para você ter uma locação tranquila, o Zero Km Movida tem a proteção completa inclusa no valor do seu produto.</p>
+          <div class="insurance-block">
+            <div class="row">
+              <div class="col-xs-2 col-md-1 img">
+                <img src="/assets/img/completa.png" />
+              </div>
+              <div class="col-xs-10 col-md-11 info">
+                <p>COMPLETA MENSAL ZERO KM</p>
+                <a href="#">Mais detalhes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row additional-services">
+        <div class="col-xs-10 col-md-11">
+          <h4>Serviços Adicionais</h4>
+          <p>Adicione serviços e aumente as possibilidades do seu Movida.</p>
+        </div>
+        <div class="col-xs-2 col-md-1 icon">
+          <fa-icon [icon]="faChevronDown" [classes]="['icon-orange']" pull="right"></fa-icon>
+        </div>
+      </div>
+
+      <div class="row accessories">
+        <div class="col-xs-10 col-md-11">
+          <h4>Acessórios</h4>
+          <p>Complete sua reserva com acessórios que deixam sua viagem mais fácil e segura.</p>
+        </div>
+        <div class="col-xs-2 col-md-1 icon">
+          <fa-icon [icon]="faChevronDown" [classes]="['icon-orange']" pull="right"></fa-icon>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="contract-header">
+        <h3>Assine agora!</h3>
+      </div>
+      <div class="contract-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>Onde você quer retirar o veículo?</label>
+              <div class="input-group input-group-md">
+                <span class="input-group-text" id="inputGroup-sizing-md"><fa-icon [icon]="faMapMarkerAlt" [classes]="['icon-black']"></fa-icon></span>
+                <input type="text" class="form-control" value="São Paulo - Congonhas Zero Km" >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Período do contrato:</label>
+              <select class="form-control">
+                <option value="12">12 meses</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Franquia KM/mês:</label>
+              <select class="form-control">
+                <option value="1000">1.000 km</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>Final da placa: <span class="question">?</span></label>
+
+              <div class="end-plates">
+                <span *ngFor="let end_plate of end_plates">
+                  <input type="radio" class="btn-check" name="end_plate" id="end_plate_{{end_plate.id}}" autocomplete="off">
+                  <label class="btn btn-end-plate" for="end_plate_{{end_plate.id}}">{{end_plate.value}}</label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>Escolha a cor: <span class="question">?</span></label>
+
+              <div class="colors">
+                <span *ngFor="let color of vehicle.colors">
+                  <input type="radio" class="btn-check" name="color" id="color_{{color.id}}" autocomplete="off">
+                  <label class="btn btn-color" for="color_{{color.id}}" style="background-color: {{color.value}}" (click)="select_color(color.id,color.title)">
+                    <fa-icon [icon]="faCheck" [classes]="['icon-orange-center']" *ngIf="form.colors_id === color.id"></fa-icon>
+                  </label>
+                </span>
+                <span class="color-name">{{color_name}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Prazo de entrega:</label> 2 dias úteis
+            <hr/>
+          </div>
+        </div>
+        <div class="row price">
+          <div class="col-md-12">
+            <label>Valor Total</label>periodicity
+            <h4><span class="money">R$</span> 899,00<span class="periodicity">/mês</span><span class="asterisk">*</span></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <button class="btn btn-orange btn-block" type="button">Continuar</button>
+          </div>
+        </div>
+      </div>
+      <div class="contract-footer">
+        <div class="row">
+          <div class="col-md-10 col-xs-8">
+            <p>O Zero Km Movida <strong>não pode ser utilizado por motorista de aplicativo</strong>. <a href="#">Veja planos</a> exclusivos para você!</p>
+          </div>
+          <div class="col-md-2 col-xs-4">
+            <img src="/assets/img/aplicativo.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
