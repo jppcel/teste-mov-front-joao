@@ -8,6 +8,7 @@ export interface Vehicle{
   id:string;
   model:string;
   model_details?:string;
+  price?:number;
   photos:Array<Photo>;
   informations:Array<Information>;
   colors:Array<VehicleColor>;
