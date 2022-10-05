@@ -64,3 +64,77 @@ header{
     margin-left: 2rem;
   }
 }
+
+footer{
+  background-color: #F4F4F4;
+  padding-top: 4rem;
+  * {
+    color: #58595B;
+  }
+  .about{
+    color: #999999;
+    font-weight: lighter;
+    font-size: 1.1rem;
+  }
+
+  .about-nav, .movida-nav, .sites-movida-nav, .last-nav{
+    margin-bottom: 2rem;
+    h6{
+      color:#F97D00;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+  }
+
+  .about-nav, .movida-nav, .last-nav{
+    a{
+      color: #999999;
+      text-decoration: none;
+      padding-right: 0.7rem;
+      border-right: 1px solid #999999;
+      margin-right: 0.7rem;
+      font-size: 0.9rem;
+    }
+    a:last-child{
+      padding-right: 0;
+      border-right: 0;
+      margin-right: 0;
+    }
+  }
+
+  .sites-movida-nav{
+    a{
+      margin-right: 1rem;
+    }
+  }
+  .last-nav{
+    a{
+      padding-right: 2rem;
+      margin-right: 2rem;
+    }
+  }
+
+  .footer-orange{
+    padding-top: 1rem;
+    padding-bottom: 0.8rem;
+    background-color: #F97D00;
+    p{
+      font-size: 0.8rem;
+      color: white;
+      margin-top: 1.4rem;
+    }
+    a{
+      margin-top: 1rem;
+      margin-left: 1rem;
+      display: inline-block;
+    }
+
+    .social-media{
+      text-align: right;
+    }
+
+    .ibama{
+      margin-top: 0.7rem;
+    }
+  }
+}
