@@ -40,7 +40,7 @@ Este é o nome da imagem a ser utilizada para subir o projeto do backend.
 
 **IMPORTANTE!** Quando você efetua o build da imagem, é efetuado a cópia dos arquivos do projeto para dentro da imagem do Docker, ou seja, qualquer modificação nos arquivos não é automaticamente replicada para a imagem, necessitando efetuar um novo build para tal.
 
-## Executando o backend a partir da imagem
+## Executando o frontend a partir da imagem
 
 Com a imagem já "buildada", agora é possível efetuar a execução do backend. Recomendo a utilização do comando abaixo:
 ```
